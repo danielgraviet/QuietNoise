@@ -16,6 +16,7 @@
     "cors": "^x.x.x",
     "dotenv": "^x.x.x",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5"
   },

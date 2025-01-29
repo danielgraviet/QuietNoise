@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
+const { auth } = require('./authRoutes');
 
 // Create a new post
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     try {
         const post = new Post(req.body);
         await post.save();
