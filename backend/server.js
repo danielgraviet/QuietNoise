@@ -17,10 +17,6 @@ app.use('/api/users', userRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/posts', postRoutes);
 
-// Test route
-app.get('/', (req, res) => {
-    res.send('Server is running!');
-});
 
 // Database Connection
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/my-blog';
@@ -34,9 +30,6 @@ const Post = require('./models/Post');
 app.get('/', (req, res) => {
     res.send('Server is running!');
 });
-
-// Use the post routes
-app.use('/api/posts', postRoutes);
 
 // Start the Server
 const PORT = process.env.PORT || 5001;
