@@ -15,9 +15,9 @@ export default function Navigation() {
 
                     {/* Middle section - Navigation links */}
                     <div className={styles.links}>
-                        <Link href="/hotel" className={styles.link}>Tech</Link>
-                        <Link href="/train" className={styles.link}>Tips</Link>
-                        <Link href="/car-rental" className={styles.link}>Talks</Link>
+                        <Link href="/tech" className={styles.link}>Tech</Link>
+                        <Link href="/tips" className={styles.link}>Tips</Link>
+                        <Link href="/talks" className={styles.link}>Talks</Link>
                     </div>
 
                     {/* Right section - Search and buttons */}

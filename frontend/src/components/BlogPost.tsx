@@ -1,11 +1,8 @@
-'use client'; // Add this at the top to mark as Client Component
+'use client';
 
 import React from 'react';
 import Image from 'next/image';
 import styles from '@/css/BlogPost.module.css';
-import mountain from '../BlogImages/mountain.jpg';
-import render from '../BlogImages/render.jpg';
-import { redirect } from 'next/dist/server/api-utils';
 
 interface BlogPost {
     _id: string;
@@ -13,9 +10,8 @@ interface BlogPost {
     content: string;
     author: string;
     createdAt: string;
-    category: string;
+    category?: string;
     readTime?: string;
-    image?: string;
 }
 
 interface BlogPostProps {
@@ -27,26 +23,24 @@ export default function BlogPost({ post, featured = false }: BlogPostProps) {
     if (featured) {
         return (
             <article className={styles.featuredArticle}>
-                <Image
-                    src={mountain}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    priority
-                />
                 <div className={styles.featuredOverlay}>
+                    <div className={styles.featuredImageContainer}>
+                        <Image
+                            src="/BlogImages/taiwan.jpg"
+                            alt={post.title}
+                            width={1000} // not doing anything
+                            height={1000}
+                            className={styles.featuredImage}
+                            priority
+                            quality={100}
+                            sizes="100vw"
+                        />
+                    </div>
                     <div className={styles.featuredContent}>
                         <span className={styles.featuredCategory}>{post.category}</span>
                         <h2 className={styles.featuredTitle}>{post.title}</h2>
-                        <p className={styles.featuredContent}>{post.content}</p>
+                        <p>{post.content}</p>
                         <div className={styles.featuredMetadata}>
-                            <Image
-                                src="/images/avatar-placeholder.jpg"
-                                alt={post.author}
-                                width={32}
-                                height={32}
-                                className={styles.featuredAvatar}
-                            />
                             <span>{post.author}</span>
                             <span>•</span>
                             <span>{post.readTime || '10 min read'}</span>
@@ -58,9 +52,9 @@ export default function BlogPost({ post, featured = false }: BlogPostProps) {
     }
 
     return (
-        <article className={`${styles.article} w-full`}>
+        <article className={styles.article}>
             <Image
-                src={render}
+                src="/BlogImages/mountain.jpg"
                 alt={post.title}
                 width={400}
                 height={250}
@@ -71,13 +65,6 @@ export default function BlogPost({ post, featured = false }: BlogPostProps) {
                 <h3 className={styles.title}>{post.title}</h3>
                 <p className={styles.content}>{post.content}</p>
                 <div className={styles.metadata}>
-                    <Image
-                        src="/avatar-placeholder.jpg"
-                        alt={post.author}
-                        width={24}
-                        height={24}
-                        className={styles.avatar}
-                    />
                     <span>{post.author}</span>
                     <span className="mx-2">•</span>
                     <span>{new Date(post.createdAt).toLocaleDateString()}</span>
@@ -85,4 +72,4 @@ export default function BlogPost({ post, featured = false }: BlogPostProps) {
             </div>
         </article>
     );
-}
+} 
