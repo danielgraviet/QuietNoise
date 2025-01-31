@@ -1,0 +1,119 @@
+.nav {
+    background-color: transparent;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.container {
+    max-width: 80rem;
+    /* 7xl = 80rem */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    /* h-16 = 4rem */
+}
+
+.logo {
+    flex-shrink: 0;
+    min-width: 120px;
+}
+
+.logoText {
+    font-family: var(--font-manrope);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.links {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex: 1;
+    margin: 0 2rem;
+
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+}
+
+.link {
+    color: #4B5563;
+    /* text-gray-600 */
+    transition: color 0.2s;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #111827;
+    /* text-gray-900 */
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    /* space-x-4 */
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchInput {
+    width: 16rem;
+    /* w-64 */
+    padding: 0.5rem 1rem;
+    /* px-4 py-2 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    background-color: #F3F4F6;
+    /* bg-gray-100 */
+    font-size: 0.875rem;
+}
+
+.searchInput:focus {
+    outline: none;
+    background-color: #E5E7EB;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4B5563;
+    transition: color 0.2s;
+}
+
+.button:hover {
+    color: #111827;
+}
+
+.signUpButton {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.signUpButton:hover {
+    background-color: #F3F4F6;
+    border-color: #D1D5DB;
+}
