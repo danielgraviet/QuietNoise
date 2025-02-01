@@ -3,6 +3,28 @@ const router = express.Router();
 const Post = require('../models/Post');
 const { auth } = require('./authRoutes');
 
+
+router.get('/featured', async (req, res) => {
+    try {
+        console.log('Fetching featured article');
+        // You can modify this query based on your criteria for featuring an article
+        // For example, you might have a 'featured' boolean field in your schema
+        const featuredArticle = await Post.findOne({ featured: true })
+            // Or get the most recent article
+            // .sort({ createdAt: -1 })
+            .limit(1);
+
+        if (!featuredArticle) {
+            return res.status(404).json({ message: 'No featured article found' });
+        }
+
+        res.json(featuredArticle);
+    } catch (error) {
+        console.error('Error fetching featured article:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 // Create a new post
 router.post('/', auth, async (req, res) => {
     try {
@@ -65,5 +87,8 @@ router.put('/:id', async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 });
+
+// Get featured article
+
 
 module.exports = router;

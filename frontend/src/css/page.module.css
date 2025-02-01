@@ -1,0 +1,108 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.heroSection {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-image: url('/images/taiwan.jpg'); /* This is the main image on the page */
+}
+
+.heroContent {
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+    max-width: 600px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.heroContent h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.heroContent p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.postMeta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.authorImage {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.blogSection {
+    padding: 48px;
+}
+
+.blogSection h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.blogDescription {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.categories button {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.categories button.active {
+    color: #000;
+    font-weight: 500;
+}
+
+.sortBy {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sortBy select {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 0.9rem;
+}

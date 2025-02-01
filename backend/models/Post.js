@@ -14,9 +14,22 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true,
+        enum: ['Tech', 'Talks', 'Tips & Hacks']
+    },
+    readTime: {
+        type: String,
+        default: '10 mins read'
+    },
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    featured: {
+        type: Boolean,
+        default: false
     }
 });
 
