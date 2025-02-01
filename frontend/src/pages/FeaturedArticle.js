@@ -42,7 +42,7 @@ const FeaturedArticle = () => {
                 <p>{article.content.substring(0, 150)}...</p>
                 <div className={styles.postMeta}>
                     <Image
-                        src="/avatar.jpg"
+                        src="/icons/user.png"
                         alt={article.author}
                         width={32}
                         height={32}

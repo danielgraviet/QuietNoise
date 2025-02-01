@@ -9,7 +9,7 @@ const NavBar = () => {
             <div className={styles.leftSection}>
                 <div className={styles.navLogo}>
                     <Image src="/logos/logo.png" alt="QuietNoise" width={30} height={30} color="white"/>
-                    <h1>QuietNoise</h1>
+                    <h1><Link href="/">QuietNoise</Link></h1>
                 </div>
 
                 {/* Links */}
@@ -17,7 +17,7 @@ const NavBar = () => {
                     <li><Link href="/">Tech</Link></li>
                     <li><Link href="/">Talks</Link></li>
                     <li><Link href="/">Tips</Link></li>
-                    <li><Link href="/">About</Link></li>
+                    <li><Link href="/about">About</Link></li>
                 </ul>
             </div>
 
