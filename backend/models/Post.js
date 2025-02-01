@@ -10,6 +10,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    imageUrl: {
+        type: String,
+        required: true,
+        default: '/images/default.jpg'
+    },
     author: {
         type: String,
         required: true

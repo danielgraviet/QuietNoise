@@ -7,11 +7,8 @@ const { auth } = require('./authRoutes');
 router.get('/featured', async (req, res) => {
     try {
         console.log('Fetching featured article');
-        // You can modify this query based on your criteria for featuring an article
-        // For example, you might have a 'featured' boolean field in your schema
+        // this looks for the first post with featured set to true
         const featuredArticle = await Post.findOne({ featured: true })
-            // Or get the most recent article
-            // .sort({ createdAt: -1 })
             .limit(1);
 
         if (!featuredArticle) {
