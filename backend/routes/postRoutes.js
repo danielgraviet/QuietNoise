@@ -66,9 +66,6 @@ router.delete('/:id', async (req, res) => {
             console.log('Post not found');
             return res.status(404).json({ message: 'Post not found' });
         }
-
-        await Comment.deleteMany({ post: req.params.id });
-
         res.status(204).send();
     } catch (error) {
         console.error('Error deleting post:', error);

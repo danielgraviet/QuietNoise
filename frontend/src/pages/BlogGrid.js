@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../css/page.module.css';
 
 const BlogGrid = () => {
@@ -60,7 +61,8 @@ const BlogGrid = () => {
 
             <div className={styles.blogGrid}>
                 {posts.map((post) => (
-                    <div key={post._id} className={styles.blogGridCard}>
+                    <Link href={`/blog/${post._id}`} key={post._id}>
+                        <div key={post._id} className={styles.blogGridCard}>
                         <div className={styles.cardImage}>
                             <Image 
                                 src={post.imageUrl}
@@ -75,6 +77,7 @@ const BlogGrid = () => {
                             <p>{post.content.substring(0, 150)}...</p>
                         </div>
                     </div>
+                    </Link>
                 ))}
             </div>
         </div>
