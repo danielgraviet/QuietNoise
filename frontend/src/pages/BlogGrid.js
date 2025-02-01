@@ -70,8 +70,10 @@ const BlogGrid = () => {
                                 objectFit='cover'
                             />
                         </div>
-                        <h3>{post.title}</h3>
-                        <p>{post.content.substring(0, 150)}...</p>
+                        <div className={styles.cardContent}>
+                            <h3>{post.title}</h3>
+                            <p>{post.content.substring(0, 150)}...</p>
+                        </div>
                     </div>
                 ))}
             </div>
