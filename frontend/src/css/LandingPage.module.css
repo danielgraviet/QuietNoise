@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .heroSection {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .heroSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .heroSection p {
+    font-size: 1.2rem;
+    color: #666;
+  }

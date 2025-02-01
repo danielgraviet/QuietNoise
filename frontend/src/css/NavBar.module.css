@@ -1,0 +1,123 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background: blue;
+    backdrop-filter: blur(10px);
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navLinks a:hover {
+    opacity: 0.8;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 0.25rem;
+    margin-right: 10rem;
+}
+
+.searchInput {
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 500px;
+    color: white;
+}
+
+.searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.langButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.loginButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.signupButton {
+    background: white;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.signupButton:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.loginButton:hover,
+.langButton:hover,
+.searchButton:hover {
+    opacity: 0.8;
+}
