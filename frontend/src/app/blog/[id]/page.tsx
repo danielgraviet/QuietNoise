@@ -1,6 +1,7 @@
 import styles from '../../../css/blogPost.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { postContent } from '../../../content/blog/firstPost';
 
 async function getBlogPost(id: string) {
   try {
@@ -14,10 +15,13 @@ async function getBlogPost(id: string) {
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
   const post = await getBlogPost(params.id);
-  
+
   if (!post) {
     notFound();
   }
+
+  // Check if this is the post we want to show custom content for
+  const isCustomPost = post._id === postContent.metadata.id;
 
   return (
     <article className={styles.blogPost}>
@@ -58,7 +62,11 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
       </div>
 
       <div className={styles.content}>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        {isCustomPost ? (
+          postContent.content
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        )}
       </div>
     </article>
   );
