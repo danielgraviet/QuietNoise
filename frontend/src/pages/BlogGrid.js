@@ -69,7 +69,7 @@ const BlogGrid = () => {
                                 alt={post.title}
                                 width={300} 
                                 height={200}
-                                objectFit='cover'
+                                className={styles.cardImage}
                             />
                         </div>
                         <div className={styles.cardContent}>
