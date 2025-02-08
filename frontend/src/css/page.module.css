@@ -172,3 +172,35 @@ body {
     color: #666;
     line-height: 1.5;
 }
+
+.blogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background: #f0f0f0;
+}
+
+.filterButton.active {
+  background: #0070f3;
+  color: white;
+  border-color: #0070f3;
+}

@@ -9,6 +9,8 @@ const BlogGrid = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [category, setCategory] = useState(['All']);
+    const [filter, setFilter] = useState('All');
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -21,6 +23,8 @@ const BlogGrid = () => {
 
                 const data = await response.json();
                 setPosts(data);
+                const uniqueCategories = ['All', ...new Set(data.map(post => post.category))];
+                setCategory(uniqueCategories);
             } catch (error) {
                 setError(error);
                 console.error('Error fetching posts:', error);
@@ -33,23 +37,30 @@ const BlogGrid = () => {
     }, []);
 
     if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error loading posts</div>;
+    if (error) return <div>Error loading posts: {error}</div>;
+
+    const filteredPosts = posts.filter(post =>
+        filter === 'All' ? true : post.category === filter
+    );
 
     return (
         <div>
             <section className={styles.blogSection}>
                 <h2>Blog</h2>
                 <p className={styles.blogDescription}>
-                    Here, we share travel tips, destination guides, and stories that inspire your next adventure.
+                    Discover the latest tech news, talks with tech experts, and tutorials without the noise.
                 </p>
 
                 <div className={styles.categories}>
-                    <button className={styles.active}>All</button>
-                    <button>Destination</button>
-                    <button>Culinary</button>
-                    <button>Lifestyle</button>
-                    <button>Tips & Hacks</button>
-
+                    {category.map(category => (
+                        <button
+                            key={category}
+                            onClick={() => setFilter(category)}
+                            className={`${styles.filterButton} ${filter === category ? styles.active : ''}`}
+                        >
+                            {category}
+                        </button>
+                    ))}
                     <div className={styles.sortBy}>
                         <span>Sort by:</span>
                         <select defaultValue="newest">
@@ -61,14 +72,17 @@ const BlogGrid = () => {
             </section>
 
             <div className={styles.blogGrid}>
-                {posts.map((post) => (
-                    <Link href={`/blog/${post._id}`} key={post._id}>
-                        <div key={post._id} className={styles.blogGridCard}>
+                {filteredPosts.map((post) => (
+                    <Link
+                        href={`/blog/${post._id}`} // This matches the [id] folder structure
+                        key={post._id}
+                        className={styles.blogGridCard}
+                    >
                         <div className={styles.cardImage}>
-                            <Image 
+                            <Image
                                 src={post.imageUrl}
                                 alt={post.title}
-                                width={300} 
+                                width={300}
                                 height={200}
                                 className={styles.cardImage}
                             />
@@ -77,7 +91,6 @@ const BlogGrid = () => {
                             <h3>{post.title}</h3>
                             <p>{post.content.substring(0, 150)}...</p>
                         </div>
-                    </div>
                     </Link>
                 ))}
             </div>

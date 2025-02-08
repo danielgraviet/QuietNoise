@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { postContent } from '../../../content/blog/firstPost';
+import { postContent } from '../../../content/blog/5-books-that-changed-my-life';
 import BlogPostContent from '../../../components/BlogPostContent';
 import type { Metadata } from 'next'
 
@@ -16,7 +16,8 @@ async function getBlogPost(id: string) {
 
 // Generate dynamic metadata for each blog post
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const post = await getBlogPost(params.id)
+  const resolvedParams = await Promise.resolve(params);
+  const post = await getBlogPost(resolvedParams.id)
 
   return {
     title: post.title,

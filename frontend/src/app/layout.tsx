@@ -11,6 +11,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://quietnoise.com'), // replace with actual domain
   title: {
     default: 'QuietNoise Tech Blog – Latest Tech News Without the Noise',
     template: '%s | QuietNoise'
