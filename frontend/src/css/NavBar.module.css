@@ -1,126 +1,162 @@
-.navContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 2rem;
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+@media (max-width: 768px) {
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 2rem;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navLogo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .navContainer {
+        padding: 1rem 1rem;
+    }
+    .navLinks {
+        display: none;
+    }
+
+    .rightSection {
+        display: none;
+    }
 }
 
-.leftSection {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
+@media (min-width: 768px) {
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 2rem;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
 
-.navLogo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
+    .leftSection {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
 
-.navLinks {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    .navLogo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+    }
 
-.navLinks a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
+    .navLinks {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.navLinks a:hover {
-    opacity: 0.8;
-}
+    .navLinks a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
 
-.rightSection {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+    .navLinks a:hover {
+        opacity: 0.8;
+    }
 
-.searchContainer {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    padding: 0.25rem;
-    margin-right: 10rem;
-}
+    .rightSection {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.searchInput {
-    padding: 0.5rem;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 1rem;
-    width: 500px;
-    color: white;
-}
+    .searchContainer {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 0.25rem;
+        margin-right: 10rem;
+    }
 
-.searchInput::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
+    .searchInput {
+        padding: 0.5rem;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 1rem;
+        width: 500px;
+        color: white;
+    }
 
-.searchButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
+    .searchInput::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+    }
 
-.langButton {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-}
+    .searchButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
 
-.loginButton {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-}
+    .langButton {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 
-.signupButton {
-    background: white;
-    border: none;
-    border-radius: 4px;
-    color: black;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-}
+    .loginButton {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
 
-.signupButton:hover {
-    background: rgba(255, 255, 255, 0.9);
-}
+    .signupButton {
+        background: white;
+        border: none;
+        border-radius: 4px;
+        color: black;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
 
-.loginButton:hover,
-.langButton:hover,
-.searchButton:hover {
-    opacity: 0.8;
+    .signupButton:hover {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .loginButton:hover,
+    .langButton:hover,
+    .searchButton:hover {
+        opacity: 0.8;
+    }
 }

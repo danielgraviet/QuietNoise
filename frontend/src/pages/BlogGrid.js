@@ -11,6 +11,7 @@ const BlogGrid = () => {
     const [error, setError] = useState(null);
     const [category, setCategory] = useState(['All']);
     const [filter, setFilter] = useState('All');
+    const [sortOrder, setSortOrder] = useState('newest');
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -43,6 +44,12 @@ const BlogGrid = () => {
         filter === 'All' ? true : post.category === filter
     );
 
+    const handleSortChange = (e) => {
+        const newSortOrder = e.target.value;
+        console.log(newSortOrder);
+        setSortOrder(newSortOrder);
+    };
+
     return (
         <div>
             <section className={styles.blogSection}>
@@ -63,7 +70,9 @@ const BlogGrid = () => {
                     ))}
                     <div className={styles.sortBy}>
                         <span>Sort by:</span>
-                        <select defaultValue="newest">
+                        <select value={sortOrder}
+                                onChange={handleSortChange}
+                        >
                             <option value="newest">Newest</option>
                             <option value="oldest">Oldest</option>
                         </select>
