@@ -8,15 +8,14 @@ const NavBar = () => {
             {/* Logo */}
             <div className={styles.leftSection}>
                 <div className={styles.navLogo}>
-                    <h2><Link href="/">QuietNoise</Link></h2>
+                    <h2><Link href="/">Legal Byte</Link></h2>
                 </div>
 
                 {/* Links */}
                 <ul className={styles.navLinks}>
-                    <li><Link href="/">Tech</Link></li>
-                    <li><Link href="/">Talks</Link></li>
-                    <li><Link href="/">Tips</Link></li>
-                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/">Tools</Link></li>
+                    <li><Link href="/">Bites</Link></li>
+                    <li><Link href="/">IP</Link></li>
                 </ul>
             </div>
 
@@ -41,8 +40,8 @@ const NavBar = () => {
                     <Image src="/icons/globe.png" alt="Language" width={25} height={25} />
                     <div className={styles.langText}>EN</div>
                 </button>
-                <button className={styles.loginButton}>Log In</button>
-                <button className={styles.signupButton}>Sign Up</button>
+                <Link className={styles.loginButton} href="/about">About</Link>
+                <button className={styles.signupButton}>Log In</button>
             </div>
         </nav>
     );

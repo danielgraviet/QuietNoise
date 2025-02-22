@@ -6,7 +6,7 @@ export const postContent = {
         title: "5 Books That Changed My Life (and How You Can Apply Their Lessons)",
         author: "Daniel Thi Graviet",
         date: "2025-02-03",
-        category: "Tips & Hacks",
+        category: "Bites",
         readTime: "5 min read",
         imageUrl: "/images/taiwan.jpg",
     },

@@ -22,7 +22,7 @@ const postSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['Tech', 'Talks', 'Tips & Hacks']
+        enum: ['Tools', 'Bites', 'IP']
     },
     readTime: {
         type: String,

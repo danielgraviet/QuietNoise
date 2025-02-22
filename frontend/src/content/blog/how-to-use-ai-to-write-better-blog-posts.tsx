@@ -6,7 +6,7 @@ export const postContent = {
         title: "How to Use AI to Write Better Blog Posts",
         author: "Daniel Thi Graviet",
         date: "2025-02-08",
-        category: "Tech",
+        category: "Tools",
         readTime: "5 min read",
         imageUrl: "/images/default.jpg",
     },

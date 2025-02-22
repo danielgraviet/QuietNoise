@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    background-image: url('/images/taiwan.jpg'); /* This is the main image on the page */
+    background-image: url('/images/courthouse.jpg'); /* This is the main image on the page */
 }
 
 .heroContent {
