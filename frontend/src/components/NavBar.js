@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from '../css/NavBar.module.css';
 import Image from 'next/image';
 
+
 const NavBar = () => {
     return (
         <nav className={styles.navContainer}>
@@ -41,7 +42,7 @@ const NavBar = () => {
                     <div className={styles.langText}>EN</div>
                 </button>
                 <Link className={styles.loginButton} href="/about">About</Link>
-                <button className={styles.signupButton}>Log In</button>
+                <Link className={styles.signupButton} href="/login">Log In</Link>
             </div>
         </nav>
     );
