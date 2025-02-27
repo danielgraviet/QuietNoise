@@ -13,16 +13,16 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL('https://quietnoise.com'), // replace with actual domain
   title: {
-    default: 'QuietNoise Tech Blog – Latest Tech News Without the Noise',
-    template: '%s | QuietNoise'
+    default: 'LegalByte: Legal Tech News, IP & Tools Insights',
+    template: '%s | LegalByte'
   },
-  description: 'Looking for captivating tech content without the noise? Welcome to QuietNoise Tech Blog! No ads, no sponsored content, just insights and inspiration.',
+  description: 'Discover legal tech news, IP updates, and tools at LegalByte. Your source for bites of innovation in the legal world.',
   keywords: ['blog', 'technology', 'writing', 'tech blog', 'tech insights', 'tech inspiration'],
   openGraph: {
-    title: 'QuietNoise Tech Blog – Latest Tech News Without the Noise',
-    description: 'Looking for captivating tech content without the noise? Welcome to QuietNoise Tech Blog! No ads, no sponsored content, just insights and inspiration.',
+    title: 'LegalByte: Legal Tech News, IP & Tools Insights',
+    description: 'Discover legal tech news, IP updates, and tools at LegalByte. Your source for bites of innovation in the legal world.',
     url: 'https://yourdomain.com', // replace with actual domain
-    siteName: 'QuietNoise Tech Blog',
+    siteName: 'LegalByte',
     images: [
       {
         url: '/images/og-image.jpg', // replace with actual image

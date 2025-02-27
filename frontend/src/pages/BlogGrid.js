@@ -55,7 +55,7 @@ const BlogGrid = () => {
             <section className={styles.blogSection}>
                 <h2>Blog</h2>
                 <p className={styles.blogDescription}>
-                    Discover the latest tech news, talks with tech experts, and tutorials without the noise.
+                    Unveil the latest legal tech tools, IP trends, and bite-sized innovation stories.
                 </p>
 
                 <div className={styles.categories}>
