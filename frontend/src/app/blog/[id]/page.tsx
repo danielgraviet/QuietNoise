@@ -16,8 +16,7 @@ async function getBlogPost(id: string) {
 
 // Generate dynamic metadata for each blog post
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const resolvedParams = await Promise.resolve(params);
-  const post = await getBlogPost(resolvedParams.id)
+  const post = await getBlogPost(params.id);
 
   return {
     title: post.title,
@@ -37,12 +36,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 }
 
 export default async function BlogPost({ params }: { params: { id: string } }) {
-
-  // this makes sure that the promise is resolved before the function is called
-  const resolvedParams = await Promise.resolve(params);
-
-  // this is a function that returns a promise
-  const post = await getBlogPost(resolvedParams.id);
+  const post = await getBlogPost(params.id);
 
   if (!post) {
     console.error('Blog post not found');

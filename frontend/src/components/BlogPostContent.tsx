@@ -2,8 +2,28 @@
 
 import Image from 'next/image';
 import styles from '../css/blogPost.module.css';
+import { JSX } from 'react';
 
-export default function BlogPostContent({ post, postContent }: any) {
+interface BlogPostProps {
+  post: {
+    _id: string;
+    title: string;
+    imageUrl: string;
+    category: string;
+    author: string;
+    createdAt: string;
+    readTime: string;
+    content: string;
+  };
+  postContent: {
+    metadata: {
+      id: string;
+    };
+    content: JSX.Element | string;
+  };
+}
+
+export default function BlogPostContent({ post, postContent }: BlogPostProps) {
   const isCustomPost = post._id === postContent.metadata.id;
 
   return (

@@ -29,7 +29,7 @@ export default function About() {
             I enjoy builidng websites and learning new things. 
             I try to keep things as simple as possible, and have found that helps me learn the most. 
             That is what inspired me to create this blog. 
-            QuietNoise is meant to drown out all the extra "noise" in the world, and help readers find information that is truly important, make significant changes, and grow into the best version of themselves.
+            QuietNoise is meant to drown out all the extra `&quot;`noise`&quot;` in the world, and help readers find information that is truly important, make significant changes, and grow into the best version of themselves.
           </p>
 
           <h2>My Goal</h2>

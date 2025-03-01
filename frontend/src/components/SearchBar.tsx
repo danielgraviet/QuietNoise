@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import styles from '@/css/NavBar.module.css';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export default function SearchBar() {

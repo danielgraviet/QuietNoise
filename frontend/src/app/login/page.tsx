@@ -37,9 +37,9 @@ const LoginPage = () => {
             localStorage.setItem('token', data.token);
             router.push('/admin/dashboard');
 
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error('Login error:', err);
-            setError(err.message || 'Failed to login');
+            setError(err instanceof Error ? err.message : 'Failed to login');
         }
     };
 

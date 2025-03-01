@@ -15,8 +15,8 @@ export const postContent = {
             <h2>A Journey Through Transformative Reads</h2>
             <p>
                 Books have an incredible power to transform our perspectives, challenge our habits, and ignite changes in our lives.
-                Over the years, I’ve encountered literature that has not only provided me with profound insights but also helped me reshape my daily routines, decisions, and even my spiritual journey.
-                Today, I’m excited to share the five books that have had the greatest impact on my life—and offer you actionable lessons to help you harness their wisdom for your own growth.
+                Over the years, I`&apos;`ve encountered literature that has not only provided me with profound insights but also helped me reshape my daily routines, decisions, and even my spiritual journey.
+                Today, I`&apos;`m excited to share the five books that have had the greatest impact on my life—and offer you actionable lessons to help you harness their wisdom for your own growth.
             </p>
 
             <div className={styles.imageContainer}>
@@ -26,7 +26,7 @@ export const postContent = {
             <h2>1. The Book of Mormon</h2>
             <h3>Why It Changed My Life</h3>
             <p>
-                For many, The Book of Mormon is much more than a religious text—it’s a guide for navigating life’s moral complexities, fostering spiritual resilience, and finding purpose. Reading this sacred scripture deepened my understanding of faith, community, and personal integrity. It taught me that life is a series of trials and triumphs, each offering a chance to grow closer to one’s true self and the divine.
+                For many, The Book of Mormon is much more than a religious text—it`&apos;`s a guide for navigating life`&apos;`s moral complexities, fostering spiritual resilience, and finding purpose. Reading this sacred scripture deepened my understanding of faith, community, and personal integrity. It taught me that life is a series of trials and triumphs, each offering a chance to grow closer to one’s true self and the divine.
             </p>
 
             <h3>Key Lessons & Applications:</h3>
@@ -55,14 +55,14 @@ export const postContent = {
                     Declutter both your physical space and your schedule. A tidy environment and a clear agenda can free up mental energy for what truly matters.
                 </li>
                 <li><strong>&bull; Focus on Quality Over Quantity:</strong>
-                    Invest your time in tasks that have the highest impact. Whether it’s in your career or personal life, focus on excellence in a few areas rather than mediocrity in many.
+                    Invest your time in tasks that have the highest impact. Whether it`&apos;`s in your career or personal life, focus on excellence in a few areas rather than mediocrity in many.
                 </li>
             </ul>
 
             <h2>3. Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear</h2>
             <h3>Why It Changed My Life</h3>
             <p>
-                Atomic Habits taught me that transformative change doesn't happen overnight. Before reading this book, I was overwhelmed by the idea of changing my habits. James Clear's focus on tiny, incremental improvements showed me that small, consistent actions can lead to monumental transformations over time. This practical, science-backed strategy has reshaped the way I approach personal development and habit formation.
+                Atomic Habits taught me that transformative change doesn`&apos;`t happen overnight. Before reading this book, I was overwhelmed by the idea of changing my habits. James Clear`&apos;`s focus on tiny, incremental improvements showed me that small, consistent actions can lead to monumental transformations over time. This practical, science-backed strategy has reshaped the way I approach personal development and habit formation.
             </p>
 
             <h3>Key Lessons & Applications:</h3>
@@ -95,12 +95,12 @@ export const postContent = {
             <ul>
                 <li><strong>&bull; Adopt a Design Thinking Approach:</strong> View your life as a series of prototypes. Experiment with different paths and approaches, treating each experience as a valuable learning opportunity.</li>
                 <li><strong>&bull; Reframe Problems as Opportunities:</strong> Instead of viewing obstacles as dead ends, see them as design challenges that can lead to creative solutions and personal growth.</li>
-                <li><strong>&bull; Regularly Reevaluate Your Life’s Blueprint:</strong> Life is dynamic. Schedule regular "design reviews" to assess your goals, strategies, and overall well-being, making adjustments as necessary to stay aligned with your evolving aspirations.</li>
+                <li><strong>&bull; Regularly Reevaluate Your Life’s Blueprint:</strong> Life is dynamic. Schedule regular `&quot;`design reviews`&quot;` to assess your goals, strategies, and overall well-being, making adjustments as necessary to stay aligned with your evolving aspirations.</li>
             </ul>
 
             <h2>Conclusion</h2>
             <p>
-                Each of these books has offered a unique perspective on living with intention and purpose. By embracing the spiritual guidance of <strong>The Book of Mormon</strong>, the focused approach of <strong>Essentialism</strong>, the incremental change advocated in <strong>Atomic Habits</strong>, the candid priorities in <strong>The Subtle Art of Not Giving A F*ck</strong>, and the creative strategies from <strong>Design Your Life</strong>, I've learned that a well-lived life is built on focus, resilience, and intentional design. I hope these lessons inspire you to refine your priorities, embrace change, and craft a life that truly resonates with your values.
+                Each of these books has offered a unique perspective on living with intention and purpose. By embracing the spiritual guidance of <strong>The Book of Mormon</strong>, the focused approach of <strong>Essentialism</strong>, the incremental change advocated in <strong>Atomic Habits</strong>, the candid priorities in <strong>The Subtle Art of Not Giving A F*ck</strong>, and the creative strategies from <strong>Design Your Life</strong>, I`&apos;`ve learned that a well-lived life is built on focus, resilience, and intentional design. I hope these lessons inspire you to refine your priorities, embrace change, and craft a life that truly resonates with your values.
             </p>
 
         </div>
