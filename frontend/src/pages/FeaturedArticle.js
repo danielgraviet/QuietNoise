@@ -14,7 +14,7 @@ const FeaturedArticle = () => {
             try {
                 // You can modify this to fetch a specific article by ID
                 // or use a query parameter to get the featured article
-                const response = await fetch('http://localhost:5001/api/posts/featured');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/featured`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch featured article');
                 }

@@ -33,7 +33,7 @@ export default function SearchBar() {
         if (query.length > 2) {
             try {
                 console.log('Searching for:', query);
-                const url = `http://localhost:5001/api/posts/search?q=${encodeURIComponent(query)}`;
+                const url = `${process.env.NEXT_PUBLIC_API_URL}/api/posts/search?q=${encodeURIComponent(query)}`;
                 console.log('Request URL:', url);
 
                 const response = await fetch(url);
