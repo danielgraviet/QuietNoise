@@ -1,38 +1,70 @@
-@media (max-width: 768px) {
+/* frontend/src/css/NavBar.module.css */
+
+/* ============================================= */
+/* === Styles for smaller screens (Mobile) === */
+/* ============================================= */
+@media (max-width: 767.98px) { /* Use .98px to avoid potential overlap with min-width */
     .navContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.75rem 2rem;
+        /* Padding is defined twice, the second one overrides the first. Using the second one: */
+        padding: 1rem 1rem;
         background: rgba(255, 255, 255, 0);
         backdrop-filter: blur(10px);
         position: fixed;
         width: 100%;
         z-index: 1;
+        box-sizing: border-box; /* Good practice to include */
+    }
+
+    .leftSection {
+        /* Styles for left section if needed on mobile, currently only holds logo */
+        display: flex; /* Ensure logo is flex item */
+        align-items: center;
     }
 
     .navLogo {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 2rem;
-        font-weight: bold;
-        color: white;
+        /* font-size/weight below might be better on the h2 inside */
     }
 
-    .navContainer {
-        padding: 1rem 1rem;
+    /* Style the H2 containing the link */
+    .navLogo h2 {
+        font-size: 1.8rem; /* Slightly smaller for mobile perhaps */
+        font-weight: bold;
+        margin: 0; /* Remove default heading margin */
     }
+
+    /* === KEY FIX for Logo Link Color === */
+    /* Target the actual link inside the H2 */
+    .navLogo h2 a,
+    .navLogo h2 a:visited { /* Target default and visited states */
+        color: white; /* Make the link text white */
+        text-decoration: none; /* Remove underline */
+    }
+    .navLogo h2 a:hover {
+        opacity: 0.8;
+    }
+    /* ====================================== */
 
     .navLinks {
-        display: none;
+        display: none; /* Hide main links */
     }
 
     .rightSection {
-        display: none;
+        display: none; /* Hide search, lang, login/signup */
     }
+
+    /* Add styles for a potential mobile menu toggle button if needed */
+
 }
 
+/* ============================================= */
+/* === Styles for larger screens (Tablet/Desktop) === */
+/* ============================================= */
 @media (min-width: 768px) {
     .navContainer {
         display: flex;
@@ -44,6 +76,7 @@
         position: fixed;
         width: 100%;
         z-index: 1;
+        box-sizing: border-box; /* Good practice */
     }
 
     .leftSection {
@@ -56,10 +89,27 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        /* Don't set text color/styles here, set on children */
+    }
+
+    /* Style the H2 containing the link */
+    .navLogo h2 {
         font-size: 2rem;
         font-weight: bold;
-        color: white;
+        margin: 0; /* Remove default heading margin */
     }
+
+    /* === KEY FIX for Logo Link Color === */
+    /* Target the actual link inside the H2 */
+    .navLogo h2 a,
+    .navLogo h2 a:visited { /* Target default and visited states */
+        color: white; /* Make the link text white */
+        text-decoration: none; /* Remove underline */
+    }
+    .navLogo h2 a:hover {
+        opacity: 0.8;
+    }
+    /* ====================================== */
 
     .navLinks {
         display: flex;
@@ -69,7 +119,8 @@
         padding: 0;
     }
 
-    .navLinks a {
+    .navLinks a,
+    .navLinks a:visited { /* Apply to default and visited */
         color: white;
         text-decoration: none;
         font-size: 1rem;
@@ -85,25 +136,27 @@
         gap: 1rem;
     }
 
-    .searchContainer {
+    /* --- Search Bar Styles (Assuming SearchBar component uses these classes) --- */
+    .searchContainer { /* You might want to scope this if SearchBar has its own module */
         position: relative;
-        width: 300px;
+        width: 300px; /* Example width */
     }
 
     .searchInput {
         width: 100%;
-        padding: 8px 36px 8px 12px;
+        padding: 8px 36px 8px 12px; /* Space for icon */
         border-radius: 8px;
+        border: none; /* Add this maybe */
         font-size: 14px;
         background-color: #f8fafc;
         color: black;
     }
 
     .searchInput::placeholder {
-        color: black;
+        color: #64748b; /* Slightly muted placeholder */
     }
 
-    .searchButton {
+    .searchButton { /* Often an icon inside the input */
         position: absolute;
         right: 10px;
         top: 50%;
@@ -112,7 +165,11 @@
         border: none;
         color: black;
         cursor: pointer;
+        padding: 0; /* Adjust as needed */
+        display: flex; /* For icon alignment */
+        align-items: center;
     }
+    /* --- End Search Bar Styles --- */
 
     .langButton {
         display: flex;
@@ -125,17 +182,28 @@
         padding: 0.5rem;
         font-size: 0.9rem;
     }
+    .langButton:hover {
+        opacity: 0.8;
+    }
 
-    .loginButton {
+    /* Assuming loginButton is an <a> tag or <Link> */
+    .loginButton,
+    .loginButton:visited { /* Apply to default and visited */
         background: none;
         border: none;
         color: white;
         cursor: pointer;
         padding: 0.5rem 1rem;
         font-size: 1rem;
+        text-decoration: none; /* Add this */
+    }
+    .loginButton:hover {
+        opacity: 0.8;
     }
 
-    .signupButton {
+    /* Assuming signupButton is an <a> tag or <Link> */
+    .signupButton,
+    .signupButton:visited { /* Apply to default and visited */
         background: white;
         border: none;
         border-radius: 4px;
@@ -144,21 +212,17 @@
         padding: 0.5rem 1rem;
         font-size: 1rem;
         font-weight: 500;
+        text-decoration: none; /* Add this */
     }
 
     .signupButton:hover {
         background: rgba(255, 255, 255, 0.9);
     }
 
-    .loginButton:hover,
-    .langButton:hover,
-    .searchButton:hover {
-        opacity: 0.8;
-    }
-
+    /* --- Search Results Styles (Assuming SearchBar component uses these classes) --- */
     .searchResults {
         position: absolute;
-        top: 100%;
+        top: calc(100% + 4px); /* Add a small gap */
         left: 0;
         width: 100%;
         max-height: 300px;
@@ -166,19 +230,20 @@
         background-color: white;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin-top: 8px;
-        z-index: 50;
+        z-index: 50; /* Ensure it's above other content */
+        list-style: none; /* Remove list bullets if it's a ul */
+        padding: 0.5rem 0; /* Add some vertical padding */
+        margin: 0;
     }
 
-    .searchResult {
-        padding: 12px 16px;
+    .searchResult { /* Assuming this is an <li> or <a> */
+        padding: 10px 16px;
         cursor: pointer;
-        border-bottom: 1px solid #f1f5f9;
+        /* border-bottom: 1px solid #f1f5f9; Remove, often looks better without */
         transition: background-color 0.2s;
-    }
-
-    .searchResult:last-child {
-        border-bottom: none;
+        display: block; /* If it's an inline element like <a> */
+        color: #1e293b; /* Base text color */
+        text-decoration: none; /* If it's a link */
     }
 
     .searchResult:hover {
@@ -189,11 +254,16 @@
         font-weight: 500;
         font-size: 14px;
         color: #1e293b;
-        margin-bottom: 4px;
+        margin-bottom: 2px; /* Smaller gap */
+        display: block; /* Ensure it takes full width */
     }
 
     .resultAuthor {
         font-size: 12px;
         color: #64748b;
+        display: block; /* Ensure it takes full width */
     }
+     /* --- End Search Results Styles --- */
 }
+
+/* Add any other base styles or utility classes outside media queries if needed */

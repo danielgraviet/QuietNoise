@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import styles from '@/css/NavBar.module.css';
+import styles from '../css/NavBar.module.css'
 import Image from 'next/image';
 import SearchBar from './SearchBar';
 
 const NavBar = () => {
+    console.log("NavBar styles object:", styles); //
     return (
         <nav className={styles.navContainer}>
             <div className={styles.leftSection}>

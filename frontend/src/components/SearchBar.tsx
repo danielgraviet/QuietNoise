@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import styles from '@/css/NavBar.module.css';
+import styles from '../css/NavBar.module.css';
 import { useRouter } from 'next/navigation';
 
 export default function SearchBar() {
